@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 1px;
+            border: 1px solid #333;
+        }
+        h1 {
+            border-bottom: 1px solid #333;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+            text-align: left;
+            margin-left: 1px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: calc(100% - 200px);
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"] {
+            margin-left: 110px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        input[type="submit"],
+        button {
+            padding: 5px 20px;
+            margin-top: 5px;
+            border: 1px solid #333;
+
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="login">
+        <h1>Login Information</h1>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Remember Set</label>
+        </div>
+        <div class="button-group">
+            <input type="submit" value="Login">
+            <button type="button">Reset</button>
+        </div>
+    </form>
+</body>
+<script>
+    document.getElementById("login").addEventListener("submit", function(event){
+        event.preventDefault();
+        const username = document.getElementById("username").value
+        const password = document.getElementById("password").value
+        if(username && password){
+            alert("Welcome to world of JavaScript")
+        }
+        else{
+            alert("Please enter both username and password")
+        }
+    })
+</script>
+</html>

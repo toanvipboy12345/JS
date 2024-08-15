@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var inputDay = prompt("Nhập ngày:");
+    var inputMonth = prompt("Nhập tháng:");
+    var inputYear = prompt("Nhập năm:");
+    var date = new Date(inputYear, inputMonth - 1, inputDay);
+    var day = date.getDay();
+    var days = ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"];
+    document.write("Ngày " + inputDay + "/" + (inputMonth + 1) + "/" + inputYear + " là " + days[day]);
+</script>
+</html>

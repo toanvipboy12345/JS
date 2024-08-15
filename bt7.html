@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+//Nhập 1 ký tự bất kì
+let char;
+
+while (isNaN(char) || char === "") {
+    char = prompt("Vui lòng nhập một ký tự là số:");
+    
+    if (isNaN(char) || char === "") {
+        alert("Ký tự bạn vừa nhập không phải là số. Vui lòng nhập lại.");
+    }
+}
+
+alert("Ký tự bạn vừa nhập là số.");
+    
+</script>

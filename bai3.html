@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+  var a1 = parseFloat(prompt("Nhập hệ số a của phương trình bậc 2:"));
+  var b1 = parseFloat(prompt("Nhập hệ số b của phương trình bậc 2:"));
+  var c1 = parseFloat(prompt("Nhập hệ số c của phương trình bậc 2:"));
+  var nghiem;
+  var delta = b1 * b1 - 4 * a1 * c1;
+  // ax^2 + b1 *xe + c1 = 0
+  if (a1 === 0) {
+    if (b1 === 0) {
+      if (c1 === 0) {
+        document.write("<br/><h2>Phương trình có vô số nghiệm</h2>");
+      } else {
+        document.write("<br/><h2>Phương trình vô nghiệm</h2>");
+      }
+    } else {
+      nghiem = -c1 / b1;
+      document.write("<br/><h2>Phương trình có nghiệm bậc nhất x = </h2>" + nghiem);
+    }
+  } else {
+
+    if (delta > 0) {
+      var x1 = (-b1 - Math.sqrt(delta)) / (2 * a1);
+      var x2 = (-b1 + Math.sqrt(delta)) / (2 * a1);
+      document.write("<br/><h2>Phương trình có hai nghiệm phân biệt x1 = </h2>" + x1);
+      document.write("<br/><h2>Phương trình có hai nghiệm phân biệt x2 = </h2>" + x2);
+    } else if (delta === 0) {
+      nghiem = -b1 / (2 * a1);
+      document.write("<br/><h2>Phương trình có nghiệm kép x = </h2>" + nghiem);
+    } else {
+      document.write("<br/><h2>Phương trình vô nghiệm</h2>");
+    }
+  }
+</script>
+</html>
